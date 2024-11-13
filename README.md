@@ -1,0 +1,2 @@
+# Building-Resilience-Community-Health-Monitoring-Post-Climate-Disaster
+ A community health monitoring system, aims to mitigate the health risks in post-disaster scenarios by offering real-time disease monitoring, early outbreak alerts, and access to critical health resources. This system enables early detection and response, ultimately helping to manage and reduce disease spread and its associated impact.
