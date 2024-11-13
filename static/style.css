@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f1ee;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    max-width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.question p {
+    font-size: 1.1rem;
+    margin-right: 20px;
+    flex: 1;
+}
+
+.options {
+    display: flex;
+}
+
+.btn {
+    background-color: #d2e4e1;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btn:hover {
+    background-color: #c2d7d4;
+}
+
+.btn.active {
+    background-color: #5d8a85;
+    color: white;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-nav {
+    background-color: #5d8a85;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-nav:hover {
+    background-color: #4a706b;
+}
+/* Hide elements initially */
+#resultPage {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Fade-in effect */
+#resultPage.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Result box styling */
+.result-box {
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slide-up 1s ease;
+}
+
+/* First aid and medicine boxes styling */
+#firstAid, #medicine {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframe animation for sliding the result box up */
+@keyframes slide-up {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

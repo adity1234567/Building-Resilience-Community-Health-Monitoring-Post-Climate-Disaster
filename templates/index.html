@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Survey</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="healthSurvey">
+
+            <!-- Page 1 -->
+            <div class="page" id="page1">
+                <h2>Page 1: Symptoms</h2>
+                <div class="question" data-question="watery_stool">
+                    <p>Do you have loose or watery stools?</p>
+                    <div class="options">
+                        <button type="button" class="btn yes" data-value="1">Yes</button>
+                        <button type="button" class="btn no" data-value="0">NO</button>
+                    </div>
+                </div>
+                <div class="question" data-question="fever">
+                    <p>Do you have a fever?</p>
+                    <div class="options">
+                        <button type="button" class="btn yes" data-value="1">Yes</button>
+                        <button type="button" class="btn no" data-value="0">NO</button>
+                    </div>
+                </div>
+                <div class="question" data-question="vomiting">
+                    <p>Are you feeling vomiting?</p>
+                    <div class="options">
+                        <button type="button" class="btn yes" data-value="1">Yes</button>
+                        <button type="button" class="btn no" data-value="0">NO</button>
+                    </div>
+                </div>
+                <button type="button" class="btn-nav" onclick="nextPage(2)">Next</button>
+            </div>
+
+            <!-- Page 2 -->
+            <div class="page" id="page2" style="display: none;">
+                <h2>Page 2: Symptoms Continued</h2>
+                <div class="question" data-question="abdominal_cramps">
+                    <p>Do you have abdominal pain?</p>
+                    <div class="options">
+                        <button type="button" class="btn yes" data-value="1">Yes</button>
+                        <button type="button" class="btn no" data-value="0">NO</button>
+                    </div>
+                </div>
+                <div class="question" data-question="fatigue">
+                    <p>Are you experiencing fatigue?</p>
+                    <div class="options">
+                        <button type="button" class="btn yes" data-value="1">Yes</button>
+                        <button type="button" class="btn no" data-value="0">NO</button>
+                    </div>
+                </div>
+                <div class="question" data-question="rice_water_stool">
+                    <p>Is your stool resembling "rice-water"?</p>
+                    <div class="options">
+                        <button type="button" class="btn yes" data-value="1">Yes</button>
+                        <button type="button" class="btn no" data-value="0">NO</button>
+                    </div>
+                </div>
+                <button type="button" class="btn-nav" onclick="prevPage(1)">Previous</button>
+                <button type="button" class="btn-nav" onclick="nextPage(3)">Next</button>
+            </div>
+
+            <!-- Page 3 -->
+            <div class="page" id="page3" style="display: none;">
+                <h2>Page 3: Severe Symptoms</h2>
+                <div class="question" data-question="dehydration">
+                    <p>Are you experiencing severe dehydration symptoms?</p>
+                    <div class="options">
+                        <button type="button" class="btn yes" data-value="1">Yes</button>
+                        <button type="button" class="btn no" data-value="0">NO</button>
+                    </div>
+                </div>
+                <div class="question" data-question="leg_cramps">
+                    <p>Have you noticed leg cramps?</p>
+                    <div class="options">
+                        <button type="button" class="btn yes" data-value="1">Yes</button>
+                        <button type="button" class="btn no" data-value="0">NO</button>
+                    </div>
+                </div>
+               
+                <div class="question" data-question="rapid_heart_rate">
+                    <p>Do you have a rapid heart rate?</p>
+                    <div class="options">
+                        <button type="button" class="btn yes" data-value="1">Yes</button>
+                        <button type="button" class="btn no" data-value="0">NO</button>
+                    </div>
+                </div>
+                <button type="button" class="btn-nav" onclick="prevPage(2)">Previous</button>
+                <button type="button" class="btn-nav" onclick="submitSurvey()">Submit</button>
+            </div>
+        </form>
+      
+<div id="resultPage" class="result-box" style="display: none;">
+    <h1>Survey Result</h1>
+    <p id="result"></p>
+    <div id="firstAid"></div>
+    <div id="medicine"></div>
+</div>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
